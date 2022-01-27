@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Registration Success</title>
+	<style type="text/css">
+	    span {
+	        display: inline-block;
+	        width: 200px;
+	        text-align: left;
+	    }
+	</style>
+</head>
+<body>
+	<table border="1" cellpaddding="10">
+		<thead>
+			<th>ID</th>
+			<th>E-MAIL</th>
+			<th>PASSWORD</th>
+			<th>POSITION</th>
+			<th>PHONE</th>
+			<th>CREATE_DATE</th>
+		</thead>
+		<tbody>
+			<tr th:each="staff : ${listStaff}">
+				<td th:text="${staff.id}">ID</td>
+				<td th:text="${staff.email}">EMAIL</td>
+				<td th:text="${staff.password}">PASSWORD</td>
+				<td th:text="${staff.position}">POSITION</td>
+				<td th:text="${staff.phone}">PHONE</td>
+				<td th:text="${staff.create_date}">CREATE DATE</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
